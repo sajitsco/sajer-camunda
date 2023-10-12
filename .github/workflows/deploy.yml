@@ -17,5 +17,5 @@ jobs:
       - name: Build maven project
         run: mvn -B clean install
       - name: Deploy to ${{ vars.SAJER_URL }}
-        run: curl -v -u ${{ secrets.AUTH }} -T web-server-spring-boot/target/ROOT.war "https://${{ vars.SAJER_URL }}/manager/text/deploy?path=/ROOT&update=true"
+        run: curl -v -u ${{ secrets.TOMCAT_AUTH }} -T web-server-spring-boot/target/ROOT.war "https://${{ vars.SAJER_URL }}/manager/text/deploy?path=/ROOT&update=true"
       - run: echo "This job's status is ${{ job.status }}."
