@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "saj-sajer",
+  "private_key_id": "18db1098f425259d1eef8fa2e3a1291ebc5bff73",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCZGqreCFXyxAPi\nP8LrVFj/cyemN36QuFbpK/PJes8Br8iM1W/Ms9AbbCD8cA8Who/+qUJTPMvWxB0n\n4KoATZtXKEVvbO5cKU1ENTgxaJmcxKUpWC5c5LjYg3Q4mVKax0avJBoKK3mhDjrB\nrVdLdy27lrDXg2LvCe/i3LgpjVWeLb4AcwDxG65m9N051uE3bBfymVr7VWjX6FnP\noGShJqTtRGosNy8OkyzhHNhuGU2kqxD4PFVHUn4mLNC8ZWi2b4WdbRhYgbyZ6lNQ\nvOS3ccSPvOXZhlz1R1oGvSVh743LtxHwNQVaXzJqlPPq7LTPtlZazrIMR6KxZy/o\nRave/OORAgMBAAECggEALX+zT5CCmkaOMOpp7q1+VUvPeKH9RtzBV0HsjO+mHQY0\nP0Yel2LIcZ3Mn7hdg4AxwqhiQYJLwWM+lt85JiXqCBi7qcVhgJn1kFOQg35mSCRY\nQNUn0gtWs2E9ZKSL29tksh+0bVlGKAqmg3AUBSVBvgGmRCWTfR4i3/Rf9lk+HGdd\n5HostXz0mq4nqD5oy+X3fWY88umWL2HPEjCILB0HAKPT6/J7W/Rwc3qiuiYBCkHF\nkve9HP2Oc7LLGvRF46VvaKPn7ARP0oeAQOFjcbEtTRjloW1BCVxXoh0YulAY4S7Z\nch5uB6px8XhcX2kRns3v67/6qvkA1slVjt0fGtGuEQKBgQDJI3Nu/lpkQWtPmfCW\nQMtFZjr+uJHiLpwqoI3v00uJcxw8XCNP9a3ag7v+Msh4y1FMueE+bGD2h8nPiC00\nZjULQ0knAmBjtbGOS48etMN6g906Lwku3mdduVH9va1mcWLNaI4LNlzJfN+C3rNc\ncvpA2EW33u6k0y6dd1Dvh2whuwKBgQDC3TUvAHS1kTt/WDWQ6euzbkWDT48ya1yA\n8SQXXYjVyj92orllCGObjcL8WB5eICK4WfEXh3fEfKsNOKTscONRGqLAmRxoNO/p\nxFRBhvUtTyThG1XEX8gnpYdneoBCJos6r2cKdvhzmlfUUS/QqUscle//V/CTPltS\nPdC/LpjlIwKBgHTDZLaRZ639oCs0pUrEUHx4LVVDlkSkZDoGvH71vUsMjN6pakJ3\nz7YjdVXK6z/cX9TXr1+KkPtstoYIep2Jm89u/x9rLMOVbX66dFoR+8y6kgm91mnj\n6EOrWmKf4vKubfnqcVMm+tRo7mPNnnfTs11Db62e+BCtG8mDw3NZvTcTAoGBAJCu\n1hIz8HPvhZGj2QHj7VGoioxYwiXZeTFz2ixPEo5KQJzBbY4KkIqq0x+x/bo9egoP\nHecuekq1lfuXFz1HBEDv2e/OvzzQMWIMl9KfdeNSZDuPpDrOMzrcuJCocBqtq6rD\nGWq3svmCm7vVG/9983siCLQ6gzGQlxWVOCz7WCKpAoGBALxCzVSP/aPmnvwcoPoz\nGt+WVGieEfcMsOGDDO+z+/40bUmTxIBTcYQBVZbLpCfZozixY1l/+qew5d3p337L\nwSf2/XCBLAAoyjqxmA+1y2wUAxDuUJa4Cjdv0lS8YldM0B3k7I7yRCO/+XLLJaoo\n3i39pMjot/Hm23rhokWUfLPj\n-----END PRIVATE KEY-----\n",
+  "client_email": "sajgroupco@saj-sajer.iam.gserviceaccount.com",
+  "client_id": "103944953872493131855",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sajgroupco%40saj-sajer.iam.gserviceaccount.com"
+}

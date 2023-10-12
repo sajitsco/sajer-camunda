@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0ipd4mi" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.11.1" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.15.0">
+  <bpmn:process id="sendInvoicesProc" name="Send Invoices" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_17coyla</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_17coyla" sourceRef="StartEvent_1" targetRef="prepareInvoices" />
+    <bpmn:sequenceFlow id="Flow_0xsdiz2" sourceRef="prepareInvoices" targetRef="sendInvoices" />
+    <bpmn:sequenceFlow id="Flow_0r2nhmd" sourceRef="sendInvoices" targetRef="viewResults" />
+    <bpmn:endEvent id="Event_18cpgjk">
+      <bpmn:incoming>Flow_1kqa7rt</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1kqa7rt" sourceRef="viewResults" targetRef="Event_18cpgjk" />
+    <bpmn:userTask id="prepareInvoices" name="Prepare Invoices">
+      <bpmn:incoming>Flow_17coyla</bpmn:incoming>
+      <bpmn:outgoing>Flow_0xsdiz2</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="viewResults" name="View Results">
+      <bpmn:incoming>Flow_0r2nhmd</bpmn:incoming>
+      <bpmn:outgoing>Flow_1kqa7rt</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:serviceTask id="sendInvoices" name="Send Invoices" camunda:delegateExpression="${sendInvoices}">
+      <bpmn:incoming>Flow_0xsdiz2</bpmn:incoming>
+      <bpmn:outgoing>Flow_0r2nhmd</bpmn:outgoing>
+    </bpmn:serviceTask>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="sendInvoicesProc">
+      <bpmndi:BPMNEdge id="Flow_17coyla_di" bpmnElement="Flow_17coyla">
+        <di:waypoint x="215" y="117" />
+        <di:waypoint x="270" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0xsdiz2_di" bpmnElement="Flow_0xsdiz2">
+        <di:waypoint x="370" y="117" />
+        <di:waypoint x="430" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0r2nhmd_di" bpmnElement="Flow_0r2nhmd">
+        <di:waypoint x="530" y="117" />
+        <di:waypoint x="590" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1kqa7rt_di" bpmnElement="Flow_1kqa7rt">
+        <di:waypoint x="690" y="117" />
+        <di:waypoint x="752" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_18cpgjk_di" bpmnElement="Event_18cpgjk">
+        <dc:Bounds x="752" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0r98pcb_di" bpmnElement="prepareInvoices">
+        <dc:Bounds x="270" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1xi8s9q_di" bpmnElement="viewResults">
+        <dc:Bounds x="590" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1a8p1qc_di" bpmnElement="sendInvoices">
+        <dc:Bounds x="430" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

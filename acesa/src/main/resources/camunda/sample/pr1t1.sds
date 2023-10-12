@@ -1,0 +1,36 @@
+{
+  "visible": true,
+  "editable": true,
+  "customizable": true,
+  "sections": {
+    "p5t1s1": {
+      "customizable": true,
+      "editable": true,
+      "visible": true,
+      "index": 0,
+      "label": "p5t1s1",
+      "icon": "p5t1s1",
+      "fields": {
+        "p5t1s1f1": {
+          "customizable": true,
+          "editable": true,
+          "visible": true,
+          "cid": "",
+          "index": 0,
+          "type": "text",
+          "required": false,
+          "options": [
+            {
+              "type": "description",
+              "label": "",
+              "value": "p5t1s1f1",
+              "icon": ""
+            }
+          ],
+          "label": "p5t1s1f1",
+          "value": ""
+        }
+      }
+    }
+  }
+}

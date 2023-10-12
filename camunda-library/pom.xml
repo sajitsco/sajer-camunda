@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+		 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+	<!-- parent pom -->
+    <parent>
+        <groupId>com.sajits.sajer</groupId>
+        <artifactId>sajer</artifactId>
+        <version>${sajer.version}</version>
+    </parent>
+
+	<!-- library info -->
+    <groupId>com.sajits.sajer.camunda</groupId>
+    <artifactId>camunda</artifactId>
+    <version>${sajer.camunda-library.version}</version>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.sajits.sajer.core</groupId>
+            <artifactId>core</artifactId>
+        </dependency>
+        <dependency>
+			<groupId>org.camunda.bpm</groupId>
+			<artifactId>camunda-engine</artifactId>
+			<scope>provided</scope>
+		</dependency>
+        <dependency>
+            <groupId>org.camunda.spin</groupId>
+            <artifactId>camunda-spin-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.camunda.spin</groupId>
+            <artifactId>camunda-spin-dataformat-all</artifactId>
+        </dependency>
+
+    </dependencies>
+	
+</project>

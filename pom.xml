@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+		 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+	<!-- parent pom -->
+    <groupId>com.sajits.sajer</groupId>
+    <artifactId>sajer</artifactId>
+    <packaging>pom</packaging>
+	<version>${sajer.version}</version>
+
+    <name>sajer</name>
+	<description>Sajer BPM System</description>
+	<properties>
+		<camunda.version>7.19.0</camunda.version>
+        <version.spin>1.11.0</version.spin>
+		<spring.version>5.3.8</spring.version>
+        <spring.boot.version>2.5.4</spring.boot.version>
+		<java.version>11</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <maven.plugins.version>3.3.2</maven.plugins.version>
+
+        <io.jsonwebtoken.jjwt.version>0.9.1</io.jsonwebtoken.jjwt.version>
+
+        <javax.servlet-api>4.0.1</javax.servlet-api>
+
+        <httpclient.version>4.5.13</httpclient.version>
+
+        <sajer.version>0.0.1</sajer.version>
+        <sajer.library.version>0.0.1</sajer.library.version>
+        <sajer.camunda-library.version>0.0.1</sajer.camunda-library.version>
+        <sajer.core.version>0.0.1</sajer.core.version>
+
+        <sajer.wssb.version>0.0.1</sajer.wssb.version>
+        <sajer.wss.version>0.0.1</sajer.wss.version>
+        <sajer.fe.version>0.0.1</sajer.fe.version>
+        <sajer.pas.version>0.0.1</sajer.pas.version>
+
+        <sajer.plugin.version>0.0.1</sajer.plugin.version>
+        <sajer.acesa.version>0.0.1</sajer.acesa.version>
+        <sajer.samo.version>0.0.1</sajer.samo.version>
+
+	</properties>
+
+    <dependencyManagement>
+		<dependencies>
+            <dependency>
+				<groupId>org.camunda.bpm</groupId>
+				<artifactId>camunda-bom</artifactId>
+				<version>${camunda.version}</version>
+				<scope>import</scope>
+				<type>pom</type>
+			</dependency>
+            <dependency>
+                <groupId>org.camunda.spin</groupId>
+                <artifactId>camunda-spin-bom</artifactId>
+                <scope>import</scope>
+                <type>pom</type>
+                <version>${version.spin}</version>
+            </dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-framework-bom</artifactId>
+				<version>${spring.version}</version>
+				<scope>import</scope>
+				<type>pom</type>
+			</dependency>
+            <dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-parent</artifactId>
+				<version>${spring.boot.version}</version>
+				<scope>import</scope>
+				<type>pom</type>
+			</dependency>
+            <dependency>
+                <groupId>com.sajits.sajer.core</groupId>
+                <artifactId>core</artifactId>
+                <version>${sajer.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sajits.sajer.library</groupId>
+                <artifactId>library</artifactId>
+                <version>${sajer.library.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sajits.sajer.camunda</groupId>
+                <artifactId>camunda</artifactId>
+                <version>${sajer.camunda-library.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${httpclient.version}</version>
+            </dependency>
+            <!--<dependency>
+                <groupId>com.google.cloud</groupId>
+                <artifactId>libraries-bom</artifactId>
+                <version>25.2.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>-->
+		</dependencies>
+	</dependencyManagement>
+
+	<!-- sub modules -->
+	<modules>
+        <module>core</module>
+        <module>library</module>
+        <module>camunda-library</module>
+        <module>web-server-spring-boot</module>
+        <module>front-end</module>
+        <module>web-server-servlet</module>
+        <module>plugin</module>
+        <module>acesa</module>
+        <module>samo</module>
+    </modules>
+
+</project>

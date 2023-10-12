@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+		 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+	<!-- parent pom -->
+    <parent>
+        <groupId>com.sajits.sajer</groupId>
+        <artifactId>sajer</artifactId>
+        <version>${sajer.version}</version>
+    </parent>
+
+	<!-- front-end-quasar info -->
+    <groupId>com.sajits.sajer.fe</groupId>
+    <artifactId>fe</artifactId>
+    <version>${sajer.fe.version}</version>
+    <packaging>war</packaging>
+
+    <build>
+		<finalName>ROOT</finalName>
+		<plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>${maven.plugins.version}</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <executions>
+                <execution>
+                    <id>copy-frontend</id>
+                    <phase>validate</phase>
+                    <goals>
+                    <goal>copy-resources</goal>
+                    </goals>
+                    <configuration>
+                    <outputDirectory>${basedir}/target/ROOT</outputDirectory>
+                    <resources>          
+                        <resource>
+                        <directory>${project.parent.basedir}/fequasar/dist/spa</directory>
+                        <filtering>false</filtering>
+                        </resource>
+                    </resources>              
+                    </configuration>            
+                </execution>
+                <execution>
+                    <id>copy-WEB-INF-files</id>
+                    <phase>validate</phase>
+                    <goals>
+                    <goal>copy-resources</goal>
+                    </goals>
+                    <configuration>
+                    <outputDirectory>${project.basedir}/target/ROOT/WEB-INF</outputDirectory>
+                    <resources>          
+                        <resource>
+                        <directory>${project.parent.basedir}/utilities/WEB-INF</directory>
+                        <filtering>false</filtering>
+                        </resource>
+                    </resources>              
+                    </configuration>            
+                </execution>
+                </executions>
+            </plugin>
+		</plugins>
+	</build>
+	
+</project>

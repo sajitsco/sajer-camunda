@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+		 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+	<!-- parent pom -->
+    <parent>
+        <groupId>com.sajits.sajer</groupId>
+        <artifactId>sajer</artifactId>
+        <version>${sajer.version}</version>
+    </parent>
+
+	<!-- web-server-servlet info -->
+    <groupId>com.sajits.sajer.wss</groupId>
+    <artifactId>wss</artifactId>
+    <version>${sajer.wss.version}</version>
+    <packaging>war</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.sajits.sajer.core</groupId>
+            <artifactId>core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${javax.servlet-api}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+		<finalName>ROOT</finalName>
+		<plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>${maven.plugins.version}</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <executions>
+                <execution>
+                    <id>copy-WEB-INF-files</id>
+                    <phase>validate</phase>
+                    <goals>
+                    <goal>copy-resources</goal>
+                    </goals>
+                    <configuration>
+                    <outputDirectory>${project.basedir}/target/ROOT/WEB-INF</outputDirectory>
+                    <resources>          
+                        <resource>
+                        <directory>${project.parent.basedir}/utilities/WEB-INF</directory>
+                        <filtering>false</filtering>
+                        </resource>
+                    </resources>              
+                    </configuration>            
+                </execution>
+                </executions>
+            </plugin>
+		</plugins>
+	</build>
+
+</project>

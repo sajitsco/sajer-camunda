@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<process-application
+    xmlns="http://www.camunda.org/schema/1.0/ProcessApplication"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <process-archive name="samo" tenantId="public"><!-- -->
+    <process-engine>default</process-engine>
+    <properties>
+      <property name="history">full</property>
+      <property name="isDeleteUponUndeploy">true</property>
+      <property name="isScanForProcessDefinitions">true</property>
+      <property name="administratorUserName">sajer</property>
+      <property name="additionalResourceSuffixes">sds</property>
+      <property name="authorizationEnabled">true</property>
+    </properties>
+  </process-archive>
+
+</process-application>
